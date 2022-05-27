@@ -1,1 +1,1 @@
-Concentrarsi sul TS codice per capire meglio il codice e la sintassi
+Concentrarsi sul codice TypeScript per capire meglio e conoscere la sintassi
