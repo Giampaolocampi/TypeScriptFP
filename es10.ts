@@ -1,5 +1,5 @@
 /**
- * possiamo utilizzare l'utile combinatore contramap: data una istanza di Eq per A e una funzione da B ad A, 
+ * possiamo utilizzare il combinatore contramap: data una istanza di Eq per A e una funzione da B ad A, 
  * possiamo derivare una istanza di Eq per B
  */
 import { Eq, struct, contramap } from 'fp-ts/Eq'

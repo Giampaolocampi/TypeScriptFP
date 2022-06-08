@@ -1,8 +1,14 @@
 import { pipe } from 'fp-ts/function'
 import * as N from 'fp-ts/number'
-import { Ord } from 'fp-ts/Ord'
+import * as S from 'fp-ts/string'
+import { sort, reverse } from 'fp-ts/ReadonlyArray'
 
-const sort = <A>(O: Ord<A>) => (
-    as: ReadonlyArray<A>): ReadonlyArray<A> => as.slice().sort(O.compare)  //utilizza il metodo slice per partire dal primo elemento
 
-pipe([3, 2, 1], sort(N.Ord), console.log) // => [1, 2, 3]
+//ordinare un array di numeri
+pipe([3, 2, 1, 6, 4, 5], sort(N.Ord), console.log) // => [1, 2, 3, 4, 5, 6]
+
+//ordinare un array di stringhe
+pipe(['Giampaolo', 'Alessio', 'Andrea', 'Chiara'], sort(S.Ord), console.log)
+
+//decrescente
+pipe([3, 2, 1, 6, 4, 5], sort(N.Ord), reverse, console.log)
